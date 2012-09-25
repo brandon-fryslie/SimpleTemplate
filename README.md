@@ -15,7 +15,9 @@ template = ${name} has an appointment on ${day}
 puts SimpleTemplate.compile data, template  
 ```
 
-output: Billy has an appointment on Thursday
+Outputs:
+
+```Billy has an appointment on Thursday```
 
 
 You cannot nest string replacements, i.e.,
@@ -26,7 +28,9 @@ template = hello ${${type}}
 puts SimpleTemplate.compile data, template  
 ```
 
-outputs: 'hello ${dog}' rather than 'hello Fido'
+Outputs:
+
+```hello ${dog}``` rather than ```hello Fido```
 
 
 You can also escape a ${} replacement with a backslash like this:
@@ -37,4 +41,6 @@ template = hello \${buddy}
 puts SimpleTemplate.compile data, template  
 ```
 
-outputs: 'hello ${buddy}' rather than 'hello \Josh'
+Outputs:
+
+```hello ${buddy}``` rather than ```hello \Josh```
