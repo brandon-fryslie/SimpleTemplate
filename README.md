@@ -1,8 +1,9 @@
+
 Simple Template Class
 
 Compiles a template and a map of variables into finished string
 
-Throws ArgumentError if you're template uses a variable not present in the data hash
+Throws ArgumentError if the template uses a variable not present in the data hash
 
 The compile function is defined as a static method of the class, no instance is needed
 
