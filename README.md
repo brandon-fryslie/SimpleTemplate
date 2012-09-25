@@ -9,26 +9,26 @@ The compile function is defined as a static method of the class, no instance is 
 
 Example:
 
-data     = { :day => 'Thursday', :name => 'Billy' }
+```data     = { :day => 'Thursday', :name => 'Billy' }
 template = ${name} has an appointment on ${day}
-puts SimpleTemplate.compile data, template
+puts SimpleTemplate.compile data, template```
 
-output:   Billy has an appointment on Thursday
+output: Billy has an appointment on Thursday
 
 
 You cannot nest string replacements, i.e.,
 
-data     = { :type => 'dog', :dog => 'Fido', :human => 'John' }
+```data     = { :type => 'dog', :dog => 'Fido', :human => 'John' }
 template = hello ${${type}}
-puts SimpleTemplate.compile data, template
+puts SimpleTemplate.compile data, template```
 
 outputs: 'hello ${dog}' rather than 'hello Fido'
 
 
 You can also escape a ${} replacement with a backslash like this:
 
-data     = { :buddy => 'Josh' }
+```data     = { :buddy => 'Josh' }
 template = hello \${buddy}
-puts SimpleTemplate.compile data, template
+puts SimpleTemplate.compile data, template```
 
 outputs: 'hello ${buddy}' rather than 'hello \Josh'
