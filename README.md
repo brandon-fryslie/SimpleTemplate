@@ -6,6 +6,7 @@ Throws ArgumentError if you're template uses a variable not present in the data 
 
 The compile function is defined as a static method of the class, no instance is needed
 
+***
 
 Example:
 
@@ -19,6 +20,7 @@ Outputs:
 
 ```Billy has an appointment on Thursday```
 
+***
 
 You cannot nest string replacements, i.e.,
 
@@ -32,6 +34,7 @@ Outputs:
 
 ```hello ${dog}``` rather than ```hello Fido```
 
+***
 
 You can also escape a ${} replacement with a backslash like this:
 
