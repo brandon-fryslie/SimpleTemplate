@@ -13,7 +13,7 @@ Example:
 
 ```
 data     = { :day => 'Thursday', :name => 'Billy' }  
-template = ${name} has an appointment on ${day}  
+template = '${name} has an appointment on ${day}'  
 puts SimpleTemplate.compile data, template  
 ```
 
@@ -27,7 +27,7 @@ You cannot nest string replacements, i.e.,
 
 ```
 data     = { :type => 'dog', :dog => 'Fido', :human => 'John' }  
-template = hello ${${type}}  
+template = 'hello ${${type}}'  
 puts SimpleTemplate.compile data, template  
 ```
 
@@ -41,7 +41,7 @@ You can also escape a ${} replacement with a backslash like this:
 
 ```
 data     = { :buddy => 'Josh' }  
-template = hello \${buddy}  
+template = 'hello \${buddy}'  
 puts SimpleTemplate.compile data, template  
 ```
 
